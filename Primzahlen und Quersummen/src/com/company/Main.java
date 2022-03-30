@@ -35,6 +35,7 @@ public class Main {
         // Variablen definieren
         String temp = "";
         int wert = 0;
+        String tempZahl = "";
 
         // String temp mit dem Wert der Zahl belegen
         temp += zahl;
@@ -42,7 +43,10 @@ public class Main {
         // for-Schleife mit der Länge des Strings durchlaufen
         // die Werte der Stellen 0 bis n werden addiert
         for (int i = 0; i < temp.length(); i++){
-            wert += temp.charAt(i);
+            tempZahl += temp.charAt(i);
+            wert += Integer.parseInt(tempZahl);
+            tempZahl = "";
+
         }
         return wert;
     }
@@ -72,6 +76,6 @@ public class Main {
 
         }
 
-        System.out.print(berechneQuersumme());
+        System.out.print(berechneQuersumme(22));
     }
 }

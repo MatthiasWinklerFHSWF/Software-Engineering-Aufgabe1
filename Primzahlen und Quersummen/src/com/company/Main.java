@@ -9,7 +9,7 @@ public class Main {
         int wert = 0;
 
         // gibt false zurück wenn die eingebene Zahl kleiner 2 ist
-        if (zahl < 2) return false;
+        if (zahl <= 2) return false;
 
         // for-Schleife läuft von 1 bis zum Wert der Zahl durch
         // teilt die Zahl durch i (1 bis n)
@@ -59,23 +59,29 @@ public class Main {
         return false;
     }
 
-
-    public static void main(String[] args) {
+    public static int erstelleAusgabe(int anzahl) {
+        int anzahlZahlen = 0;
 
 
         // geht die Zahlen von 1 bis n durch
         // println die Ergebnisse mit true
-        for (int i = 1; i < 100; i++){
+        for (int i = 1; i < anzahl; i++) {
 
             if (loeseAufgabe(i)) {
                 System.out.print(i + " ");
                 System.out.print(loeseAufgabe(i));
                 System.out.print("\n");
+                anzahlZahlen += 1 ;
             }
-
-
         }
+        System.out.println("Zwischen 1 und " + anzahl + " gibt es " + anzahlZahlen + " Zahlen die eine Primzahl sind mit einer Quersumme als Primzahl");
+        return anzahlZahlen;
+    }
 
-        System.out.print(berechneQuersumme(22));
+    public static void main(String[] args) {
+        erstelleAusgabe(1000);
+
+
+        // System.out.print(berechneQuersumme(22));
     }
 }

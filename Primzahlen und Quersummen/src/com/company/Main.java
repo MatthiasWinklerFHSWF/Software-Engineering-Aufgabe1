@@ -14,11 +14,11 @@ public class Main {
         // for-Schleife läuft von 1 bis zum Wert der Zahl durch
         // teilt die Zahl durch i (1 bis n)
         for (int i = 1; i <= zahl; i++){
-           wert = zahl % i;
-        // wenn Modulo gleich 0 ist, dann zähle den Counter hoch
-           if(wert == 0) {
-               counter++;
-           }
+            wert = zahl % i;
+            // wenn Modulo gleich 0 ist, dann zähle den Counter hoch
+            if(wert == 0) {
+                counter++;
+            }
         }
 
         // wenn der Counter 2 ergibt dann gib true zurück == eine Primzahl
@@ -72,5 +72,6 @@ public class Main {
 
         }
 
+        System.out.print(berechneQuersumme());
     }
 }
